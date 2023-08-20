@@ -1,0 +1,35 @@
+site_name: reDIVE World
+site_url: https://redive.world
+site_description: Let's all DIVE again!
+site_author: Yellow
+repo_url: https://github.com/YellowberryHN/redive
+
+copyright: Definitely don't download this and distribute it to all your friends :^)
+
+theme:
+  name: material
+  navigation_depth: 3
+  palette:
+    primary: custom
+    accent: custom
+    scheme: slate
+  icon:
+    repo: fontawesome/brands/github-alt
+  features:
+    - navigation.sections
+extra_css:
+  - css/extra.css
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+  - offline
+markdown_extensions:
+    - callouts
+
+nav:
+  - Home: index.md
+  - Info:
+    - "The DiVER's Guide": guide.md
+    - WACCA Launcher: launcher.md
