@@ -25,7 +25,7 @@ for improvement.
 
 - <ins>***Game files***</ins> (The guide was written for 3.07.01, but should work with most versions)
   > FAILURE: **Unsupported versions**
-  > As of June 2023, **SDFE** 1.00.00 (Launch version) and all versions of **SDHN/SDJE** (Chinese version) do not work with the
+  > As of June 2023, **SDFE** 1.00.00 (Launch version) and all versions of **SDHN or SDJE** (Chinese version) do not work with the
   > configuration laid out in this guide.
 - Phillips #2 screwdriver, and ideally JIS #2 as well.
 - An empty SATA SSD with at least 128GB of capacity (I use [this one](https://www.amazon.com/-/dp/B08CK7T9FG/) in mine)

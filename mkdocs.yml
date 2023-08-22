@@ -17,6 +17,7 @@ theme:
     repo: fontawesome/brands/github-alt
   features:
     - navigation.sections
+    - navigation.expand
 extra_css:
   - css/extra.css
 
@@ -27,9 +28,17 @@ plugins:
   - offline
 markdown_extensions:
     - callouts
+    - attr_list
 
 nav:
   - Home: index.md
   - Info:
-    - "The DiVER's Guide": guide.md
-    - WACCA Launcher: launcher.md
+    - Guides:
+      - "The DiVER's Guide": guide.md
+      - WACCA Launcher: launcher.md
+      - Replacing LED Boards: guide/led-replace.md
+      - DIY LED Boards: guide/led-pcb.md
+    - Specifications:
+        - Manuals: info/manual.md
+        #- Hardware: info/hardware.md
+    #- Info Dump: info/dump.md
