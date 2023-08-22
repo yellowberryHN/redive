@@ -52,7 +52,7 @@ for improvement.
 - [Visual C++ 2012 Redistributable x64](https://www.microsoft.com/en-us/download/details.aspx?id=30679)
 - [Visual C++ 2015-2022 Redistributable x64](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 - [Hay1tsme's ST](https://gitea.tendokyu.moe/Hay1tsme/segatools)
-  ([Pre-built version, preconfigured](/files/mercury-cab.zip))
+  ([Pre-built version, preconfigured](files/mercury-cab.zip))
 
 ### Helpful things
 
@@ -296,7 +296,7 @@ Now, detach the new drive from the system and connect it to your USB to SATA ada
 > Set the value to `C:\WACCA\Reverse\bin\start.bat` **Ensure that you put the correct path for your configuration, because if you don't, the system will not boot correctly.**
 
 > SUCCESS: **New Method**
-> Follow the setup instructions for the [WACCA Launcher](/launcher.html) and then return here.
+> Follow the setup instructions for the [WACCA Launcher](launcher.md) and then return here.
 
 Finally, you need to configure the cab's display for this new setup. Close all of the programs you have open, and then reopen NVIDIA Control Panel and navigate to `Display > Rotate display`.
 Disconnect your monitor from the GPU and connect the cab's DVI cable. Press Alt+Spacebar, press M, and click and drag the window to the part of the display you can see.

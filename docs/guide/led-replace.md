@@ -7,7 +7,7 @@ There's a few good options for replacements.
 [SpeedyLabs](https://www.speedylabs.us/product/wacca-ws2813-led-pcb/) is selling their revision of the PCB, you'll need 60 of them to replace all your touch units.
 [CensoredUsername](https://docs.google.com/forms/d/e/1FAIpQLSfETDKtABUGxhhcBXFDWuHlz1cwHNNozOXztCPOOsENcN5KxA/viewform) is another source for the EU.
 
-Or alternatively, you can [make your own](./led-pcb.html)
+Or alternatively, you can [make your own](led-pcb.md)
 
 ## Instructions
 

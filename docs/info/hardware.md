@@ -30,7 +30,7 @@ COM5: Keychip
 COM6: Console Lights
 ```
 
-Check out the [manual](/info/manual.html) for more information about the system.
+Check out the [manual](manual.md) for more information about the system.
 
 ## Sound System
 
