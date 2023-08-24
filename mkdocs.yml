@@ -29,16 +29,22 @@ plugins:
 markdown_extensions:
     - callouts
     - attr_list
+    - md_in_html
 
 nav:
   - Home: index.md
   - Info:
-    - Guides:
-      - "The DiVER's Guide": guide.md
-      - WACCA Launcher: launcher.md
+    - "The DiVER's Guide": guide.md
+    - Guides: 
       - Replacing LED Boards: guide/led-replace.md
-      - DIY LED Boards: guide/led-pcb.md
+      - DIY LED Boards:      guide/led-pcb.md
+      - ALLS Drive Imaging: guide/alls-image.md
+      - Custom LED Driver: guide/custom-led-driver.md
+      - Networking Guide: guide/router.md
+      - Accessory Guide: guide/accessories.md
+      - Custom Charts:  guide/custom-charts.md
     - Specifications:
-        - Manuals: info/manual.md
-        #- Hardware: info/hardware.md
-    #- Info Dump: info/dump.md
+      - Hardware: info/hardware.md
+      - Manuals: info/manual.md   
+    - Tools:
+      - WACCA Launcher: launcher.md

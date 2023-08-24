@@ -12,8 +12,8 @@ title: The DiVER's Guide
 ## What is this?
 
 This document contains instructions for setting up a WACCA arcade cabinet with a thrown together OS while still
-maintaining the functionality of the game. I've written this guide to be as friendly I could, however there may be room
-for improvement.
+maintaining the functionality of the game. I've written this guide to be as beginner friendly as I could, 
+however there may be room for improvement.
 
 > WARNING: **Disclaimer**
 > This process takes a while (around 2-3 hours), there's a lot of tedious setup, and it's a bit of a pain in the ass.
@@ -25,8 +25,8 @@ for improvement.
 
 - <ins>***Game files***</ins> (The guide was written for 3.07.01, but should work with most versions)
   > FAILURE: **Unsupported versions**
-  > As of June 2023, **SDFE** 1.00.00 (Launch version) and all versions of **SDHN or SDJE** (Chinese version) do not work with the
-  > configuration laid out in this guide.
+  > As of June 2023, **SDFE** 1.00.00 (Launch version) and all versions of **SDHN or SDJE** (Chinese version) do not 
+  > work with the configuration laid out in this guide.
 - Phillips #2 screwdriver, and ideally JIS #2 as well.
 - An empty SATA SSD with at least 128GB of capacity (I use [this one](https://www.amazon.com/-/dp/B08CK7T9FG/) in mine)
 - [An ISO of **Windows 10 Enterprise LTSB 2016 x64**](https://pixeldrain.com/u/Wpa7aDce)
@@ -71,11 +71,10 @@ for improvement.
 > WARNING:
 > **Ensure the cab's main power is disconnected, because it should be.** This may be obvious, but make sure.
 
-In this part, we need to take the ALLS computer out so that we can access the drive to install the one we got to
-replace it. Unfortunately it's quite difficult to open the ALLS while it's still in the cab, so we must remove it
-for now.
+In this part, we need to take the ALLS computer out so that we can install the new drive. 
+Unfortunately it's quite difficult to open the ALLS while it's still in the cab, so we must remove it for now.
 
-Inside the cab, you will find the ALLS, firmly attached to the subwoofer. If your cab came with a keychip, you will
+Inside the cab, you will find the ALLS firmly attached to the subwoofer. If your cab came with a keychip, you will
 first want to remove it from the keychip slot by squeezing on the bottom of it and pulling it out. Don't misplace that.
 
 Next, unplug the single connector in the well to the right of the subwoofer and left of the coin box. Lastly, you want
@@ -99,18 +98,18 @@ connectors. There are an additional 4 screws holding the drive to the cage, remo
 
 You now should have a drive in your possession that weighs more than it looks like it should.
 At this point, I would ***heavily recommend***
-[taking a full disk image of the drive **ON LINUX**](https://linuxhint.com/make-disk-images-dd-command-linux/),
+[taking a full disk image of the drive **ON LINUX**](guide/alls-image.md),
 just in case anything happens to it.
 > DANGER: **Scary Red Text Zone** 
 > <span style="color: red; font-size: .8rem;">
 > ***Do not plug this into any PC running Windows, it will turn into a paperweight!***
 > </span>
 
-Now, you can install the new drive into the cage. Plug the SATA connectors back in, but don't install the cage back onto
+Now you can install the new drive into the cage. Plug the SATA connectors back in, but don't install the cage back onto
 the frame, unless you aren't using the USB to SATA adapter to transfer files to your drive, in which case you can.
 
 Slide the subwoofer/ALLS assembly back into the cab. Be aware that there is an alignment tab in the back of the cab
-where the subwoofer slots in. Don't screw the subwoofer down yet, you have to be able to remove it toput the top panel
+where the subwoofer slots in. Don't screw the subwoofer down yet, you have to be able to remove it to put the top panel
 back on later.
 
 There should be a helpful diagram sticker on the front of the ALLS that shows you where to plug all of the cables in,
@@ -127,30 +126,29 @@ It's finally time to do some actual installing.
 
 ### BIOS Configuration
 
-At this point, you should grab your external monitor, ensure it's in a landscape position, and plug in into the
+At this point, you should grab your external monitor, ensure it's in a landscape position, and plug it into the
 DVI port on the graphics card.
-> NOTE: None of the other ports are worked on my card, but they may work for you. Using DVI guarantees it will work.
+> NOTE: None of the other ports worked on my card, but they may work for you. Using DVI guarantees it will work.
 
 You will now want to connect your USB hub to one of the available USB ports and connect the keyboard, mouse, and
 USB drive with Windows 10 Enterprise LTSB 2016 x64 to the hub. From here, plug the cab back into power, grab the
 keyboard, flip the main power switch located the inside of the cab (not the ALLS one, ensure that always stays on),
-and spam the Del key until you are prompted for the BIOS password.
+and spam the <kbd>Del</kbd> key until you are prompted for the BIOS password, which is `iG4k8yDa`.
 
-The BIOS password is not exactly a secret at this point, as it's been posted in the open several times,
-so I'll provide it here: `iG4k8yDa`
+Once you have access to the BIOS, you'll want to head into the `Boot` section and change the first boot device to 
+`USB Hard Drive` (the other USB ones didn't work for me) and the second boot device to the Hard Drive, 
+as shown in the picture.
 
-Once you have access to the BIOS, you'll want to head into the Boot section and change the first boot device to USB Hard
-Drive (the other USB ones didn't work for me) and the second boot device to the Hard Drive, as shown in the picture.
 > DANGER: **Do not change anything else!** You risk wiping your TPM key and make it impossible to boot from the
 > original drive if you do!
 
-Save and exit with F4 and select Yes when you are done.
+Save and exit with F4 and select `Yes` when you are done.
 
 ### Installing Windows
 
-Once your BIOS is correctly configured, it should reboot and put you into the Windows installer. Start the installation
+Once your BIOS is correctly configured, it should reboot and put you into the Windows installer. Start the installation,
 and if it asks you for a product key at any point, skip it. Next, it will ask you what kind of Windows install you want;
-pick Custom and you should then be presented with the partitioning screen.
+pick `Custom` and you should be presented with the partitioning screen.
 
 You will want to create a new partition on Drive 0 that is the default size (the entire drive). It will notify you that
 it's creating additional partitions to help with Windows, and then you can continue to the next step.
@@ -160,16 +158,16 @@ will be rebooted, remove your USB drive from the hub and wait for the system to 
 your machine.
 
 Once the system has restarted, it should prompt you to answer a few questions about configuration. The keyboard
-configuration should be the same as your preferred keyboard, and for the privacy settings, just turn everything off, you
+configuration should be the same as your preferred keyboard. For the privacy settings, just turn everything off, you
 don't need any of that. It should now ask you for a username. This doesn't really matter, I just made mine `WACCA`.
 **Leave the password blank so that the system will automatically log in and press Next.**
 
 Wait a few moments and you should be presented with the Windows desktop. Ensure the files mentioned in the preface are 
- your USB drive, and insert it back into the USB hub. You now want to run the 7-Zip installer, as many things will
- require you to extract archives. Once you've done that, open 7-Zip, go to Tools > Settings, and change all the
- extentions for your user to 7-Zip.
+your USB drive, and insert it back into the USB hub. You now want to run the 7-Zip installer, as many things will
+require you to extract archives. Once you've done that, open 7-Zip, go to `Tools > Settings`, and change all the
+extentions for your user to 7-Zip.
 
-Next, you'll want to run the MAS script. To extract it from it's archive, you'll want to use the password `1234`. After
+Next, you'll want to run the MAS script. To extract it from its archive, you'll want to use the password `1234`. After
 you run it, you'll want to select KMS38 and then select the first option. This will prevent Windows from screaming at
 you to activate it after a few days.
 
@@ -181,11 +179,11 @@ Now, we can move on to installing the drivers that are necessary for interfacing
 
 ### Prerequisites Installation
 
-Run the installer for the Nvidia Display Driver, making sure to select only NVIDIA Graphics Driver,
-you don't need GeForce Experience, because that shit sucks. Select Custom Install, uncheck everything, then click Next.
+Run the installer for the Nvidia Display Driver, making sure to only select `NVIDIA Graphics Driver`,
+you don't need GeForce Experience, because that shit sucks. Select `Custom Install`, uncheck everything, then click `Next`.
 Wait for this process to complete, you may see your screen flicker.
 
-**If any of the installers prompt you to restart, select Restart Later.** Install the FTDI driver,
+**If any of the installers prompt you to restart, select `Restart Later.`** Install the FTDI driver,
 Management Engine, Chipset, and Audio drivers.
 
 Now install the both Visual C++ Redists, and the DirectX Redist. Specify a path for the DirectX Redist (I usually use
@@ -195,7 +193,7 @@ Now install the both Visual C++ Redists, and the DirectX Redist. Specify a path 
 
 Next, you should modify the buffer sizes for the COM ports on the ALLS. This is something that's done by the stock ALLS
 system and it didn't seem to make much of a difference with or without it, but you might as well change it just to be
-sure. Press Win + X, and open Device Manager from the list that appears. Open the Ports section, and do the following
+sure. Press <kbd>Win</kbd> + <kbd>X</kbd>, and open Device Manager from the list that appears. Open the `Ports` section, and do the following
 for COM ports 1-4:
 
 * Right click, click Properties
@@ -215,7 +213,7 @@ do the following:
   and select OneDrive.
 * Double click on `Prevent the usage of OneDrive for file storage`
 * Change it from `Not Configured` to `Enabled` and click OK.
-* Navigate back to the Windows Components section, and select Windows Defender.
+* Navigate back to the Windows Components section, and select `Windows Defender`.
 * Double click on `Turn off Windows Defender` and set it to `Enabled` as well.
 
 You should now reboot the machine **from the Start Menu** to make sure all of the changes have saved correctly.
@@ -299,7 +297,7 @@ Now, detach the new drive from the system and connect it to your USB to SATA ada
 > Follow the setup instructions for the [WACCA Launcher](launcher.md) and then return here.
 
 Finally, you need to configure the cab's display for this new setup. Close all of the programs you have open, and then reopen NVIDIA Control Panel and navigate to `Display > Rotate display`.
-Disconnect your monitor from the GPU and connect the cab's DVI cable. Press Alt+Spacebar, press M, and click and drag the window to the part of the display you can see.
+Disconnect your monitor from the GPU and connect the cab's DVI cable. Press <kbd>Alt</kbd>+<kbd>Spacebar</kbd>, press <kbd>M</kbd>, and click and drag the window to the part of the display you can see.
 Rotate the display to `Portrait (flipped)` and press Apply.
 
 Reboot the system and the game should now start automatically. Congratulations, you've now set up your cab!
