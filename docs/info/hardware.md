@@ -173,10 +173,10 @@ Handles audio output to the control panel
 
 This giant metal LED lined panel has [4] plugs that connect to
 
-1) Card reader
-2) VFD display to show IC readout for cash cards. Mine had some burn in. *Unused.*
-3) Headphone amp jack with VOL UP and VOL DOWN buttons
-4) All the LEDs
+1. Card reader
+2. VFD display to show IC readout for cash cards. Mine had some burn in. *Unused.*
+3. Headphone amp jack with VOL UP and VOL DOWN buttons
+4. All the LEDs
 
 The coin entry stuff connected to the cash box is here too.
 
@@ -198,8 +198,8 @@ In total, there are 480 LEDs in the touch controller assembly
 
 The sensor array is made out of 5 columns and 4 rows amounting to 20 touch zones par segment. 
 All 12 segments amount to a total of 240 touch zones.
-![WACCA sensor array](https://cdn.discordapp.com/attachments/568491469799817246/1143575566423969812/WACCA_Sensor_Flexible_PCB_Lowres.png "A segment's touch sensor array. There are 12 of these.")
-Click [here](https://cdn.discordapp.com/attachments/297114097546297354/1068442545727746078/WACCA_Sensor_Flexible_PCB-1.png) to download a higher resolution image.
+![WACCA sensor array](https://cdn.discordapp.com/attachments/568491469799817246/1143575566423969812/Wacca_Sensor_Flexible_PCB_Lowres.png "A segment's touch sensor array. There are 12 of these.")
+Click [here](https://cdn.discordapp.com/attachments/297114097546297354/1068442545727746078/Wacca_Sensor_Flexible_PCB-1.png) to download a higher resolution image.
 
 Somehow I never really understood how MASSIVE these units are until I held an individual segment in my hand.
 ![This shit is massive](https://media.discordapp.net/attachments/568491469799817246/1143563743557591070/PXL_20230822_151247219.jpg "")
