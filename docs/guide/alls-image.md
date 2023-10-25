@@ -15,37 +15,35 @@ Use DD to image the drive <https://linuxhint.com/make-disk-images-dd-command-lin
 > 
 > Begin by installing lsscsi.
 > 
-> `sudo apt install lsscsi`
+> - `sudo apt install lsscsi`
 > 
 > `lsscsi` lists all the drives plugged in, look for your wacca drive (if you have some kind of complex setup, do the command prior to plugging in the drive and then after to discover which one)
 > 
-> `sudo fdisk /dev/sd<wacca-drive>`
+> - `sudo fdisk /dev/sd<wacca-drive>`
 > 
 > we want to access the wacca drive. replace `/dev/sd<wacca-drive>` with whatever you saw in the previous step
 > 
->   `p`
+>  - `p`
 > 
 >   This will list all the partitions on the drive and the exact sector count. Important to note them.
 > 
->   `q`
+>   - `q`
 > 
 >   quits out of fdisk
 > 
->   `sudo dd if=/dev/sd<wacca-drive> of=/pathtostorage/wacca.img bs=100M conv=noerror`
+>   - `sudo dd if=/dev/sd<wacca-drive> of=/pathtostorage/wacca.img bs=100M conv=noerror`
 > 
 >   Creates a clone image of the specified input `if` to the specified destination `of`
 > 
-> `ls -lh wacca.img`
+>  - `ls -lh wacca.img`
 > 
 >   Checks permission of the drive, should match the original
 > 
->   `fdisk -l wacca.img`
+>   - `fdisk -l wacca.img`
 > 
->   To compare the sector count, should match the original
+>   To compare the sector count, should match the original, then restore using
 > 
-> then restore using
-> 
->   `sudo dd if=<wacca.img> of=<newdrive> bs=100M conv=noerror`
+>   - `sudo dd if=<wacca.img> of=<newdrive> bs=100M conv=noerror`
 > 
 > You'll want to restore on a 120gb or at most 240gb drive to be compatible with how a main storage format works at the moment. (but if you aren't doing that, any larger sized ssd can work)
 > 

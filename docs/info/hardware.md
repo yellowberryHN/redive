@@ -38,8 +38,10 @@ COM5: Keychip
 COM6: Console Lights
 ```
 
-Check out the [manual](manual.md) for more information about the system.  
-[Imaging Your ALLS Drive](../guide/alls-image.md)
+Check out the [manual](manual.md) for more information about the system. 
+
+*See also:*
+- [Imaging Your ALLS Drive](../guide/alls-image.md)
 
 ## Sound System
 
@@ -85,14 +87,14 @@ LFA150F-12-J1 150W 12V 50-60Hz 12.5A IN AC100-240V
 LFA150F-5-J1Y 150W 5V 50-60Hz 30A IN AC100-240V
 ```
 
-![Power supplies](https://github.com/jbamuro/waccamole/raw/main/img/DSC00812.JPG)
+![Power supplies](../img/DSC00812.JPG)
 
 These two units supply all the power needed for the PCB components (sound system, LEDs, touch controller etc).
 My photos will look a little different at the bottom as we had to jerry rig an extension cable to feed power into the unit since I don't have the original cabling for it. Works fine on American power, there are also reports of it working fine in Europe.
 
 R1 uses a 300VA but that's probably overkill.
 
-![step down transformer](https://cdn.discordapp.com/attachments/267603668046446603/1045057845999173692/IMG_20221123_112537805_HDR.jpg)
+![step down transformer](../img/r1_stepdown.jpg)
 
 Hits about 200W during attract mode.
 TODO: power info during songlist pull etc.
@@ -101,12 +103,12 @@ TODO: power info during songlist pull etc.
 
 There are two of these and they each process 6 segments. Together they control the two halves of the touch controller assembly (for a total of 12 segments).
 
-![Master Touch Unit Control Board](https://github.com/jbamuro/waccamole/raw/main/img/DSC00814.JPG "Master Touch Unit Control Board for the 6 segments on the right of the touch assembly (Can be determined thanks to it's ID, currently set to 8. The controller ID for the left segments is 7)")
+![Master Touch Unit Control Board](../img/DSC00814.JPG "Master Touch Unit Control Board for the 6 segments on the right of the touch assembly (Can be determined thanks to it's ID, currently set to 8. The controller ID for the left segments is 7)")
 
 Each segment of the touch controller is connected to the others with the help of RS485 through a ribbon cable.
 The PCBs present on each segment are the exact same with the addition of a custom Pentel IC and some extra components needed to drive the tactile sensor array.
 
-![Pentel IC](https://github.com/jbamuro/waccamole/raw/main/img/DSC00835.JPG "The custom Pentel IC handling tactile input")
+![Pentel IC](../img/DSC00835.JPG "The custom Pentel IC handling tactile input")
 
 *Here's a detailed component list of those boards :*
 
@@ -123,9 +125,9 @@ The PCBs present on each segment are the exact same with the addition of a custo
 | RG1       | XC6206 662K 3.3V 0.5A Voltage regulator | 3.3V 0.5A Voltage regulator |
 | RG2       | [178M05 91 03](https://datasheetspdf.com/pdf-file/614024/HitachiSemiconductor/178M05/1) | 5V 0.5A Fixed Voltage regulator |
 
-<details markdown="1"><summary>Click to show a Top View picture of the PCB</summary>
+<details markdown><summary>Click to show a Top View picture of the PCB</summary>
 
-![Touch Unit Control Board](https://cdn.discordapp.com/attachments/568491469799817246/1143576271461302333/Top_View.jpg)
+![Touch Unit Control Board](../img/Top_View.jpg)
 
 </details>
 
@@ -133,7 +135,7 @@ The PCBs present on each segment are the exact same with the addition of a custo
 
 It sends the pretty colors to the touch controller.
 
-![LED Data board](https://github.com/jbamuro/waccamole/raw/main/img/DSC00813.JPG "An LED Data board, connected to the ALLS using usb")
+![LED Data board](../img/DSC00813.JPG "An LED Data board, connected to the ALLS using usb")
 
 Here's a rundown of what this board is made out of:
 
@@ -154,17 +156,17 @@ Pin 5 - 5V, VCC in
 
 ## 2.1ch Amp
 
-![2.1 channel AMP](https://github.com/jbamuro/waccamole/raw/main/img/DSC00816.JPG "2.1 channel AMP (14-1466CR), Handles analog sound routing to subwoofer and tweeters")
+![2.1 channel AMP](../img/DSC00816.JPG "2.1 channel AMP (14-1466CR), Handles analog sound routing to subwoofer and tweeters")
 Handles analog sound routing to subwoofer and tweeters
 
 ## Headphone Amp
 
-![Headphone Amplifier](https://github.com/jbamuro/waccamole/raw/main/img/DSC00815.JPG "Headphone Amplifier (00-1358AR), Handles audio output to the control panel")
+![Headphone Amplifier](../img/DSC00815.JPG "Headphone Amplifier (00-1358AR), Handles audio output to the control panel")
 Handles audio output to the control panel
 
 ## I/O Control Board (837-15257-01)
 
-![I/O Control Board](https://github.com/jbamuro/waccamole/raw/main/img/DSC00817.JPG)
+![I/O Control Board](../img/DSC00817.JPG)
  The existence of this board is a bit overkill for what it's used for, likely it *had* to be used due to SEGA producing the cabinets for Marvelous. This is a newer version of the control board that has a USB port on it, almost all sega cabs use this now.
 
  *Note: WACCA does NOT check for a coin counter, so the resistor trick is not needed to apply credits in game.*
@@ -188,7 +190,7 @@ The Aime card reader is model number **610-0955**. There are lots of good soluti
 The touch controller assembly is composed of 12 segments divided into two halves 
 (6 per side, each having their own main controller board). They each have an individual channel ranging from 1 to 6.
 
-![WACCA touch segment](https://media.discordapp.net/attachments/568491469799817246/1143565017216733204/PXL_20230822_151822250.jpg "Three segments on my small table")
+![WACCA touch segment](../img/PXL_20230822_151822250.jpg "Three segments on my small table")
 
 Each one of these weighs 1kg (2.2LBS) *(870g if the metal bracket is removed)* which totals to about 12kg (26LBS).
 
@@ -198,17 +200,17 @@ In total, there are 480 LEDs in the touch controller assembly
 
 The sensor array is made out of 5 columns and 4 rows amounting to 20 touch zones par segment. 
 All 12 segments amount to a total of 240 touch zones.
-![WACCA sensor array](https://cdn.discordapp.com/attachments/568491469799817246/1143575566423969812/Wacca_Sensor_Flexible_PCB_Lowres.png "A segment's touch sensor array. There are 12 of these.")
-Click [here](https://cdn.discordapp.com/attachments/297114097546297354/1068442545727746078/Wacca_Sensor_Flexible_PCB-1.png) to download a higher resolution image.
+![WACCA sensor array](../img/Wacca_Sensor_Flexible_PCB_Lowres.png "A segment's touch sensor array. There are 12 of these.")
+Click [here](../img/Wacca_Sensor_Flexible_PCB-1.png) to download a higher resolution image.
 
 Somehow I never really understood how MASSIVE these units are until I held an individual segment in my hand.
-![This shit is massive](https://media.discordapp.net/attachments/568491469799817246/1143563743557591070/PXL_20230822_151247219.jpg "")
+![This shit is massive](../img/PXL_20230822_151247219.jpg "")
 
 
 Here are some scans of a segment that shows the curve profile.
-<br><img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve1.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve1.png" width="150" height="150"/>
-<img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve2.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve2.png" width="150" height="150"/>
-<img src="https://github.com/jbamuro/waccamole/raw/main/img/concurve3.png" data-canonical-src="https://github.com/jbamuro/waccamole/raw/main/img/concurve3.png" width="150" height="150"/>
+<br><img src="../img/concurve1.png" data-canonical-src="../img/concurve1.png" width="150" height="150"/>
+<img src="../img/concurve2.png" data-canonical-src="../img/concurve2.png" width="150" height="150"/>
+<img src="../img/concurve3.png" data-canonical-src="../img/concurve3.png" width="150" height="150"/>
 
 ### LED Boards
 

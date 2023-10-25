@@ -16,7 +16,7 @@ So, you want to manufacture your own LED PCBs? Well, here's a good way to go abo
    is SMD instead of THT. If you need THT, the previous August revision will do just fine.
 2. [Download KiCad](https://www.kicad.org/download/)
 3. Open `wacca_ws2813.kicab_pcb`.
-4. `File` --> `Fabrication Outputs` --> `Gerbers (.gbr)`. Set your output directory appropriately. 
+4. `File > Fabrication Outputs > Gerbers (.gbr)`. Set your output directory appropriately. 
 5. Click `Generate Drill Files...` and ensure that the drill units are in millimeters. 
    Click `Generate Drill File` and `Generate Map File`.
 6. Click `Plot`.

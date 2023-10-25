@@ -23,10 +23,11 @@ however there may be room for improvement.
 
 ### Things you'll need
 
-- [<ins>***Game files***</ins>](#archive "internet archive moment") (The guide was written for 3.07.01, but should work with most versions)
+- [<ins>***Game files***</ins>](#archive "internet archive moment") (The guide was written for 3.07.01, but should work 
+  with most versions)
   > FAILURE: **Unsupported versions**
-  > As of June 2023, **SDFE** 1.00.00 (Launch version) and all versions of **SDHN or SDJE** (Chinese version) do not 
-  > work with the configuration laid out in this guide.
+  > As of August 2023, **SDFE** 1.00.00 (Launch version) and all versions of **SDHN or SDJE** (Chinese version) do not 
+  > work with the configuration laid out in this guide, due to missing support in ST.
 - Phillips #2 screwdriver, and ideally JIS #2 as well.
 - An empty SATA SSD with at least 128GB of capacity (I use [this one](https://www.amazon.com/-/dp/B08CK7T9FG/) in mine)
 - [An ISO of **Windows 10 Enterprise LTSB 2016 x64**](https://iso.massgrave.dev/pd/en_windows_10_enterprise_2016_ltsb_x64_dvd_9059483.iso)
@@ -37,22 +38,23 @@ however there may be room for improvement.
 - A spare keyboard and mouse
 - An external 1080p monitor that can swivel to portrait and has DVI input on it (oddly specific, not strictly required,
   but a huge pain in the ass if you don't have it)
-- [7-Zip](https://7-zip.org)
-- [MAS](https://github.com/massgravel/Microsoft-Activation-Scripts)
-  (It's annoying having your cab nag you to activate Windows)
-- [Motherboard Drivers](https://www.gigabyte.com/us/Enterprise/Embedded-Computing/MDH11BM-rev-10#Support):
-    - Intel Management Engine 11.6.29.3287
-    - Intel Chipset 10.1.1.38
-    - Realtek Audio 435
-- Additional Drivers
-    - [Nvidia Graphics Drivers](https://www.nvidia.com/download/driverresults.aspx/141906/en-us/)
-      (Older version, newer versions might work? Probably not.)
-    - [FTDI D2XX USB to Serial](https://ftdichip.com/wp-content/uploads/2021/08/CDM212364_Setup.zip)
-- [DirectX June 2010 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=8109)
-- [Visual C++ 2012 Redistributable x64](https://www.microsoft.com/en-us/download/details.aspx?id=30679)
-- [Visual C++ 2015-2022 Redistributable x64](https://aka.ms/vs/17/release/vc_redist.x64.exe)
-- [Hay1tsme's ST](https://gitea.tendokyu.moe/Hay1tsme/segatools)
-  ([Pre-built version, preconfigured](files/mercury-cab.zip))
+- These files on the flash drive:
+  - [7-Zip](https://7-zip.org)
+  - [MAS](https://github.com/massgravel/Microsoft-Activation-Scripts)
+    (It's annoying having your cab nag you to activate Windows)
+  - [Motherboard Drivers](https://www.gigabyte.com/us/Enterprise/Embedded-Computing/MDH11BM-rev-10#Support):
+      - Intel Management Engine 11.6.29.3287
+      - Intel Chipset 10.1.1.38
+      - Realtek Audio 435
+  - Additional Drivers
+      - [Nvidia Graphics Drivers](https://www.nvidia.com/download/driverresults.aspx/141906/en-us/)
+        (Older version, newer versions might work? Probably not.)
+      - [FTDI D2XX USB to Serial](https://ftdichip.com/wp-content/uploads/2021/08/CDM212364_Setup.zip)
+  - [DirectX June 2010 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=8109)
+  - [Visual C++ 2012 Redistributable x64](https://www.microsoft.com/en-us/download/details.aspx?id=30679)
+  - [Visual C++ 2015-2022 Redistributable x64](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+  - [Hay1tsme's ST](https://gitea.tendokyu.moe/Hay1tsme/segatools)
+    ([Pre-built version, preconfigured](files/mercury-cab.zip))
 
 ### Helpful things
 
@@ -142,7 +144,7 @@ as shown in the picture.
 > DANGER: **Do not change anything else!** You risk wiping your TPM key and make it impossible to boot from the
 > original drive if you do!
 
-Save and exit with F4 and select `Yes` when you are done.
+Save and exit with <kbd>F4</kbd> and select `Yes` when you are done.
 
 ### Installing Windows
 
@@ -162,10 +164,10 @@ configuration should be the same as your preferred keyboard. For the privacy set
 don't need any of that. It should now ask you for a username. This doesn't really matter, I just made mine `WACCA`.
 **Leave the password blank so that the system will automatically log in and press Next.**
 
-Wait a few moments and you should be presented with the Windows desktop. Ensure the files mentioned in the preface are 
+Wait a few moments, and you should be presented with the Windows desktop. Ensure the files mentioned in the preface are 
 your USB drive, and insert it back into the USB hub. You now want to run the 7-Zip installer, as many things will
 require you to extract archives. Once you've done that, open 7-Zip, go to `Tools > Settings`, and change all the
-extentions for your user to 7-Zip.
+extensions for your user to 7-Zip.
 
 Next, you'll want to run the MAS script. To extract it from its archive, you'll want to use the password `1234`. After
 you run it, you'll want to select KMS38 and then select the first option. This will prevent Windows from screaming at
@@ -192,9 +194,9 @@ Now install the both Visual C++ Redists, and the DirectX Redist. Specify a path 
 ### Serial Port Setup
 
 Next, you should modify the buffer sizes for the COM ports on the ALLS. This is something that's done by the stock ALLS
-system and it didn't seem to make much of a difference with or without it, but you might as well change it just to be
-sure. Press <kbd>Win</kbd> + <kbd>X</kbd>, and open Device Manager from the list that appears. Open the `Ports` section, and do the following
-for COM ports 1-4:
+system, and it didn't seem to make much of a difference with or without it, but you might as well change it just to be
+sure. Press <kbd>Win</kbd> + <kbd>X</kbd>, and open Device Manager from the list that appears. Open the `Ports` section,
+and do the following for COM ports 1-4:
 
 * Right click, click Properties
 * Click Port Settings
@@ -204,8 +206,8 @@ for COM ports 1-4:
 
 ### Group Policy Changes
 
-Next we will disable OneDrive and Windows Defender, as both of these are high memory background processes that just suck
-up processing power for no real reason since this machine isn't a typical PC setup. To disable these components,
+Next we will disable OneDrive and Windows Defender, as both of these are high memory background processes that will just
+suck up processing power for no real reason, since this machine isn't a typical PC setup. To disable these components,
 do the following:
 
 * Press the Win key, type `group`, and open the entry that says `Edit group policy`.
@@ -216,7 +218,7 @@ do the following:
 * Navigate back to the Windows Components section, and select `Windows Defender`.
 * Double click on `Turn off Windows Defender` and set it to `Enabled` as well.
 
-You should now reboot the machine **from the Start Menu** to make sure all of the changes have saved correctly.
+You should now reboot the machine **from the Start Menu** to make sure all the changes have saved correctly.
 > WARNING: Do not power cycle the cab until after the computer has shut down, as the changes may not save correctly.
 
 ----
@@ -234,73 +236,70 @@ choose `Rear Speaker Out` and disable the auto popup dialog. Press OK on both di
 
 After that, shut down the system and flip the main cabinet power switch (by the test and service buttons). This is
 mostly to make sure the file system changes are journaled correctly, as if they aren't, connecting the drive to another
-computer will cause all files transfered to it afterwards to disappear when the system is booted again.
+computer will cause all files transfered to it afterward to disappear when the system is booted again.
 
 Now, detach the new drive from the system and connect it to your USB to SATA adapter, and then to your computer.
+
 > DANGER: **Scary Red Text Zone** 
 > <span style="color: red; font-size: .8rem;">
 > ***Again, as a reminder, do not under any circumstance connect the <ins>original</ins> drive to a Windows computer!***
 > </span>
 
->! WARNING: **Old Method (kinda shitty)**
-> *This part of the guide will be replaced soon, but it's alright to follow for now.*
->
-> ----
-> 
-> Once you have connected the drive, create a `WACCA` folder on the root of the drive, and then inside of it create
-> another folder called `Reverse` (or whatever version you're using).
-> 
-> **Please note, as of March 2023, SDFE 1.00.00 (Launch version) and all versions of SDJE (Chinese version) do not work with the configuration laid out in this guide.**
-> 
-> Copy the game files into the directory you created. There should be folders named `bin`, `pxbin` and `WindowsNoEditor` in the folder, as well as a few files.
-> **Eject the drive**, plug it back in to the cab, and power the cab on.
-> 
-> Navigate to the folder with the game files, and then into the `bin` folder. Click View, and enable `File name extensions`, and click View again to hide the bar.
-> Extract your copy of segatools into this folder. Now, in the address bar, it should say something like `This PC > Local Disk (C:) > WACCA > Reverse > bin`, click on the empty space to the right of bin,
-> and type `write start.bat` and press Enter. Wordpad should open.
-> 
-> In this document, copy the first taskkill line and paste it directly under, changing the exe to `explorer.exe`. Under the taskkill line at the bottom,
-> add the line `start explorer.exe`. **If you are configuring a version that is pre-Lily (WACCA or WACCA S), you also need to change `Mercury-Win64-Shipping.exe` to `Mercury.exe`.**
-> Save the file, if it asks you about text-only documents, select Yes. Close Wordpad, and now repeat the above steps to open `segatools.ini`
-> 
-> In this file, you need to make a few changes as follows:
-> - Change `enable` to 0 under the `[touch]` and `[elisabeth]` sections
-> - Add `enable=0` under the `[io4]` section
-> - Add an `[aime]` section at the bottom and add `enable=0` on that as well
-> 
-> Save that file as well. We need to make additional configuration changes, but the files haven't been created yet so you have to launch the game.
-> Launch the game by running `start.bat`. A big W should appear, the game should start, and the lights on the cab should light up. Both LED and Touch checks should be successful.
-> It should then hang on the Network check, at this point you should press Alt+F4 to close the game.
-> 
-> Open the file explorer again, and navigate back to the `bin` folder. There should now be an `appdata` folder. Navigate to `appdata\SDFE\Saved\Config\WindowsNoEditor`,
-> right click on `Hardware.ini`, and click Edit. Add `OfflineMode=True` under the `[/Script/Mercury.MercuryNetworkSettings]` section and save the file.
-> 
-> Start the game again, and note that the game now skips the network check and loads to the main menu successfully.
-> 
-> Press the test button to open the test menu. Use the volume buttons to navigate up and down, and the test button to select. Navigate to `Device Test Menu > Test of Sound-Speaker`.
-> Ensure the speakers are working by selecting `Replay BGM Sample`, picking `LEFT + RIGHT`. Plug some headphones into the jack to ensure that you can hear something from them as well.
-> It will be quiet, but you should hear something. Once you have finished testing that, select `Return`.
-> 
-> Navigate to `Test of Input Machine` and ensure the all of the panels light up as you touch them. Press test and service buttons at the same time to return.
-> Navigate to `Test of Output Machine`, select `Control Panel LED` and ensure it lights up the front panel. Select `Aime Reader LED` and ensure that it also lights up.
-> If it does not, consult the troubleshooting guide.
-> 
-> Return back to the main test menu and navigate to `System Setting > Closing Time Setting`. Go down to `All Days of the Week` and change it until all of the times on the page say `OFF`.
-> Select `Apply Settings and Reboot`. This will not actually reboot the system, it will only close the game.
-> 
-> Now you have to set the game to automatically start when you start the cab. Press Win+R, type `regedit` and press Enter. Once it has opened, navigate to the
-> `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\IniFileMapping\system.ini\boot\` key. Double click the `Shell` value and change the `SYS:` to `USR:Software\`.
-> Navigate to `HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\`. Right click in the empty area on the right, select `New > String Value`, and name it `Shell`.
-> Set the value to `C:\WACCA\Reverse\bin\start.bat` **Ensure that you put the correct path for your configuration, because if you don't, the system will not boot correctly.**
+Once you have connected the drive, create a `WACCA` folder on the root of the drive, and then inside of it create 
+another folder called `Reverse` (or whatever version you're using).
 
-> SUCCESS: **New Method**
-> Follow the setup instructions for the [WACCA Launcher](launcher.md) and then return here.
+> FAILURE: **Unsupported versions**
+> As of August 2023, **SDFE** 1.00.00 (Launch version) and all versions of **SDHN or SDJE** (Chinese version) do not 
+> work with the configuration laid out in this guide, due to missing support in ST.
+  
+Copy the game files into the directory you created. There should be folders named `bin`, `pxbin` and `WindowsNoEditor`
+in the folder, as well as a few files. Navigate to the `bin` folder, and extract the ST zip into this folder.
 
-Finally, you need to configure the cab's display for this new setup. Close all of the programs you have open, and then reopen NVIDIA Control Panel and navigate to `Display > Rotate display`.
+If you are configuring a version that is pre-Lily (WACCA or WACCA S), you need to open the `start.bat` file 
+**with a text editor**, and change `Mercury-Win64-Shipping.exe` to `Mercury.exe`.
+
+If you are ***not*** using the provided ST build, you will need to make some changes to `segatools.ini`:
+- Change `enable` to 0 under the `[touch]` and `[elisabeth]` sections
+- Add `enable=0` under the `[io4]` section
+- Add an `[aime]` section at the bottom and add `enable=0` on that as well
+
+**Eject the drive**, plug it back in to the cab, and power the cab on.
+ 
+We need to make additional configuration changes, but the files haven't been created yet, so you have to launch the game.
+Navigate to the folder you installed the game in, and launch it by running `start.bat`. A big W should appear, the game
+should start, and the lights on the cab should light up. Both LED and Touch checks should be successful.
+It should then hang on the Network check, at this point you should press <kbd>Alt</kbd>+<kbd>F4</kbd> to close the game.
+
+Open the file explorer again, and navigate back to the `bin` folder. There should now be an `appdata` folder. Navigate
+to `appdata\SDFE\Saved\Config\WindowsNoEditor`, right click on `Hardware.ini`, and click `Edit`. Add `OfflineMode=True`
+under the `[/Script/Mercury.MercuryNetworkSettings]` section and save the file.
+
+Start the game again, and note that the game now skips the network check and loads to the main menu successfully.
+ 
+Press the test button to open the test menu. Use the volume buttons to navigate up and down, and the test button to
+select. Navigate to `Device Test Menu > Test of Sound-Speaker`. Ensure the speakers are working by selecting
+`Replay BGM Sample`, picking `LEFT + RIGHT`. Plug some headphones into the jack to ensure that you can hear something
+from them as well.
+It will be quiet, but you should hear something. Once you have finished testing that, select `Return`.
+ 
+Navigate to `Test of Input Machine` and ensure all the panels light up as you touch them. Press test and service
+buttons at the same time to return. Navigate to `Test of Output Machine`, select `Control Panel LED` and ensure it
+lights up the front panel. Select `Aime Reader LED` and ensure that it also lights up. If it does not, consult the
+troubleshooting guide.
+ 
+Return back to the main test menu and navigate to `System Setting > Closing Time Setting`. Go down to 
+`All Days of the Week` and change it until all the times on the page say `OFF`. Select `Apply Settings and Reboot`.
+This will not actually reboot the system, it will only close the game.
+
+**If you are setting up multiple versions, repeat these steps for each version.**
+
+Follow the setup instructions for the [WACCA Launcher](launcher.md) and then return here.
+
+Finally, you need to configure the cab's display for this new setup. Close all the programs you have open, and then reopen NVIDIA Control Panel and navigate to `Display > Rotate display`.
 Disconnect your monitor from the GPU and connect the cab's DVI cable. Press <kbd>Alt</kbd>+<kbd>Spacebar</kbd>, press <kbd>M</kbd>, and click and drag the window to the part of the display you can see.
 Rotate the display to `Portrait (flipped)` and press Apply.
 
 Reboot the system and the game should now start automatically. Congratulations, you've now set up your cab!
 
-### TODO: Instructions for reassembling the cab, add shortcut to start game.
+### TODO: Instructions for reassembling the cab
 

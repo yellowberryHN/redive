@@ -36,6 +36,7 @@ nav:
   - Info:
     - "The DiVER's Guide": guide.md
     - Guides: 
+      - Test Menu: guide/test-menu.md
       - Replacing LED Boards: guide/led-replace.md
       - DIY LED Boards:      guide/led-pcb.md
       - ALLS Drive Imaging: guide/alls-image.md

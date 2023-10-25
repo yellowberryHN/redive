@@ -1,5 +1,5 @@
 # Custom LED Driver
-<figure markdown>![WACCA LEDs](https://cdn.discordapp.com/attachments/568491469799817246/1144020876740808824/PXL_20230822_121850510.jpg)
+<figure markdown>![WACCA LEDs](../img/custom_led_board_demo.jpg)
 <figcaption>Look at how pretty this is! (don't mind the LED strip on the right)</figcaption>
 </figure>
 
