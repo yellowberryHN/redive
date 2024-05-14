@@ -4,8 +4,6 @@ site_description: Let's all DIVE again!
 site_author: Yellow
 repo_url: https://github.com/YellowberryHN/redive
 
-copyright: Definitely don't download this and distribute it to all your friends :^)
-
 theme:
   name: material
   navigation_depth: 3
