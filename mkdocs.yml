@@ -47,3 +47,5 @@ nav:
       - Manuals: info/manual.md   
     - Tools:
       - WACCA Launcher: launcher.md
+    - Reference:
+      - Table Map: info/data/tables.md
