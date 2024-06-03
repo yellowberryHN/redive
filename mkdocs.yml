@@ -6,6 +6,7 @@ repo_url: https://github.com/YellowberryHN/redive
 
 theme:
   name: material
+  custom_dir: overrides
   navigation_depth: 3
   palette:
     primary: custom
