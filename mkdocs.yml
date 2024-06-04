@@ -2,7 +2,7 @@ site_name: reDIVE World
 site_url: https://redive.world
 site_description: Let's all DIVE again!
 site_author: Yellow
-repo_url: https://github.com/YellowberryHN/redive
+repo_url: https://github.com/yellowberryHN/redive
 
 theme:
   name: material
