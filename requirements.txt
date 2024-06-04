@@ -1,0 +1,2 @@
+mkdocs-callouts
+mkdocs-git-revision-date-localized-plugin
