@@ -26,7 +26,6 @@ plugins:
       fallback_to_build_date: true
   - offline
 markdown_extensions:
-    - callouts
     - attr_list
     - md_in_html
 
