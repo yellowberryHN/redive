@@ -8,7 +8,7 @@ at startup, and also allows you to run multiple versions of WACCA on your cab an
 
 ## Prerequisites
 
-- Game files, set up with Hay1tsme's ST
+- Game files, set up with [TeamTofuShop's ST](https://gitea.tendokyu.moe/TeamTofuShop/segatools)
 - [The latest version of WACCA Launcher](https://github.com/YellowberryHN/WACCALauncher/releases/latest)
 - Keyboard and mouse plugged into the cab
 

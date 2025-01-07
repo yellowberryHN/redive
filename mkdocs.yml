@@ -25,9 +25,15 @@ plugins:
   - git-revision-date-localized:
       fallback_to_build_date: true
   - offline
+  - callouts
+
 markdown_extensions:
-    - attr_list
-    - md_in_html
+  - callouts
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
 
 nav:
   - Home: index.md

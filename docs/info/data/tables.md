@@ -232,7 +232,7 @@ List that defines display options.
 List that defines game options.
 
 ### MusicSelectOptionNoteColorTable
-List of note color options. Maps parameter to [NotesColorTable](#notescolortable note color ID). Custom note colors may be possible?
+List of note color options. Maps parameter to [NotesColorTable](#notescolortable) (note color ID). Custom note colors may be possible?
 
 ### MusicSelectOptionSoundSetting
 List of sound options.
