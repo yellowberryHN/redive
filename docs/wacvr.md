@@ -1,7 +1,7 @@
 ﻿---
-title: Playing Without a Cabinet
+title: WACVR Setup
 ---
-# Playing Without a Cabinet
+# WACVR Setup
 ## What is this?
 This is a guide explaining how to play WACCA at home without owning a cabinet, while there are a multitude of ways to go about this, we have come to the conclusion that using WACVR and data is the best and most accurate way of playing.
 
