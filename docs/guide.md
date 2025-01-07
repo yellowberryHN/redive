@@ -3,12 +3,6 @@ title: The DiVER's Guide
 ---
 # The DiVER's Guide
 
-<!--
-> TIP:
-> The powers that be might not appreciate this information being public. In an abundance of caution,
-> [you might want to download this for safe keeping...](https://github.com/YellowberryHN/redive/archive/refs/heads/master.zip)
--->
-
 ## What is this?
 
 This document contains instructions for setting up a WACCA arcade cabinet with a thrown together OS while still
@@ -53,8 +47,8 @@ however there may be room for improvement.
   - [DirectX June 2010 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=8109)
   - [Visual C++ 2012 Redistributable x64](https://www.microsoft.com/en-us/download/details.aspx?id=30679)
   - [Visual C++ 2015-2022 Redistributable x64](https://aka.ms/vs/17/release/vc_redist.x64.exe)
-  - [Hay1tsme's ST](https://gitea.tendokyu.moe/Hay1tsme/segatools)
-    ([Pre-built version, preconfigured](files/mercury-cab.zip))
+  - [TeamTofuShop's ST](https://gitea.tendokyu.moe/TeamTofuShop/segatools)
+    ([Pre-built version, preconfigured](files/mercury-cab-2024-12-23.zip))
 
 ### Helpful things
 
