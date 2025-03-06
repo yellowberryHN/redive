@@ -79,7 +79,7 @@ Navigate to `App\WindowsNoEditor\Mercury\Config` and open `DefaultHardware.ini` 
 ### Setting up WACVR
 Download WACVR from [here](https://github.com/xiaopeng12138/WACVR) and extract to a folder of your choice
 
-copy the `mercuryio.ini` file to the the `App/bin` folder in your data folder
+copy the `mercuryio.dll` file to the the `App/bin` folder in your data folder
 
 Start up your VR software as well as SteamVR, then launch WACCA and WACVR
 WACVR should set up with WACCA automatically.
