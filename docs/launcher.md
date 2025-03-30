@@ -59,7 +59,7 @@ Here's an example of what mine looks like for Reverse:
 
 > NOTE: For WACCA and WACCA S, the `config_region_jpn.json` file should be omitted from the config list, and the exe's name is `Mercury.exe`
 
-You can confirm that the launcher works by starting `WACCALauncher.exe`. You should see some text that says `LOADING...`. From here, it will load whatever the first 
+You can confirm that the launcher works by starting `WACCALauncher.exe`. You should see some text that says `LOADING...`. From here, it will load the default profile, which will be the first file alphabetically if not set.
 
 You can interrupt the startup if you press the `TEST` button inside the cab. This should bring up the WACCALauncher menu, where you can change your default profile, as well as launch a profile manually. You can navigate this menu just like you would navigate the test menu in-game.
 
