@@ -22,10 +22,17 @@ extra_css:
 
 plugins:
   - search
-  - git-revision-date-localized:
-      fallback_to_build_date: true
   - offline
   - callouts
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+  - git-revision-date-localized:
+      fallback_to_build_date: true
 
 markdown_extensions:
   - callouts
@@ -48,7 +55,7 @@ nav:
       - Networking Guide: guide/router.md
       - Accessory Guide: guide/accessories.md
       - Custom Charts:  guide/custom-charts.md
-      - WACVR Setup: guide/wacvr.md
+      - WACVR Setup:   guide/wacvr.md
     - Specifications:
       - Hardware: info/hardware.md
       - Manuals: info/manual.md   

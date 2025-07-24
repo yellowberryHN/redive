@@ -97,10 +97,13 @@ TODO: come back and add something here.
 ### Test of Card Reader
 
 This menu allows you to test the communications with the Aime card reader in the cab. You can scan cards here, and it should return success if it worked.
+
 ## Hardware Information
 
 This menu tells you information about your cab's hardware. It provides you with the Housing ID, Aime reader firmware version, and touch controller firmware versions. 
+
 ## System Setting
+TODO: this isn't done yet, sorry.
 
 ### Closing Time Setting
 

@@ -67,9 +67,14 @@ Now you have to configure the cab to start the launcher when it boots. ***If you
 
 For more information about configuring WACCALauncher, please check out the [GitHub page](https://github.com/yellowberryHN/WACCALauncher).
 
->? WARNING: Manual Auto-Start Instructions:
-> Press <kbd>Win</kbd>+<kbd>R</kbd>, type `regedit` and press Enter. Once it has opened, navigate to the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\IniFileMapping\system.ini\boot\` key.
-> Double click the `Shell` value and change the part that says `SYS:` to say `USR:Software\`. Navigate to `HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\`. Right click in the empty area on the right,
-> Select `New > String Value`, and name it `Shell`. Set the value to the full path of the `WACCALauncher.exe` file.
+>? WARNING: **Manual Auto-Start Instructions**
+> Press <kbd>Win</kbd>+<kbd>R</kbd>, type `regedit` and press Enter.
+> 
+> Once it has opened, navigate to the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\IniFileMapping\system.ini\boot\` key.
+> Double click the `Shell` value and change the part at the beginning that says `SYS:` to say `USR:Software\`.
+> 
+> Navigate to `HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\`.
+> Right click in the empty area on the right, select `New > String Value`, and name it `Shell`.
+> Set the value to the full path of the `WACCALauncher.exe` file.
 > 
 > **Ensure that you put the correct path for your configuration, because if you don't, the system will not boot correctly.**

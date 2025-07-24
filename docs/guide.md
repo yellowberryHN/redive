@@ -6,31 +6,42 @@ title: The DiVER's Guide
 ## What is this?
 
 This document contains instructions for setting up a WACCA arcade cabinet with a thrown together OS while still
-maintaining the functionality of the game. I've written this guide to be as beginner friendly as I could, 
-however there may be room for improvement.
+maintaining the functionality of the game. I've written this guide to be as beginner-friendly as I could, 
+but it still requires a level of technical background, which you are assumed to have.
+
+> DANGER: **Important!**
+> The instructions on this page are intended **only for original hardware!** They are not recommended for non-cab setups.
 
 > WARNING: **Disclaimer**
 > This process takes a while (around 2-3 hours), there's a lot of tedious setup, and it's a bit of a pain in the ass.
 
-> DANGER: **Important!**
-> The instructions on this page are intended **only for original hardware!** They are not recommended for non-cab setups.
+> QUESTION: **"Do I need this guide?"**
+> If you only intend to play on [popular network],
+> **this guide is not for you, please follow the instructions provided by the network.**
+
+> NOTE:
+> The configuration here will set up your cab in a similar way to how the cab is normally set up.
+> This isn't super future-proof and relies on old versions of software. There will *eventually* be a new guide,
+> which will provide a way to run a more modern system and still run the game.
 
 ### Things you'll need
 
 - [<ins>***Game files***</ins>](#archive "internet archive moment") (The guide was written for 3.07.01, but should work 
   with most versions)
   > FAILURE: **Unsupported versions**
-  > As of August 2023, **SDFE** 1.00.00 (Launch version) and all versions of **SDHN or SDJE** (Chinese version) do not 
-  > work with the configuration laid out in this guide, due to missing support in ST.
+  > As of July 2025, all versions of **SDHN or SDJE** (Chinese version) do not 
+  > work with the configuration laid out in this guide. This may change in the future.
+  > 
+  > Please ensure you are working with clean game files if you run into issues.
 - Phillips #2 screwdriver, and ideally JIS #2 as well.
 - An empty SATA SSD with at least 128GB of capacity (I use [this one](https://www.amazon.com/-/dp/B08CK7T9FG/) in mine)
-- [An ISO of **Windows 10 Enterprise LTSB 2016 x64**](https://iso.massgrave.dev/pd/en_windows_10_enterprise_2016_ltsb_x64_dvd_9059483.iso)
+- [An ISO of **Windows 10 Enterprise LTSB 2016 x64**](https://drive.massgrave.dev/en_windows_10_enterprise_2016_ltsb_x64_dvd_9059483.iso)
   ([mirror](https://mega.nz/file/PBtggDaA#HySjX6zWohJKRVqpt_qUYgzRCBFzTmnNDXWESj_mvWI)) (This is important)
 - A 16gb or higher capacity flash drive (Turn this drive into a bootable drive of the ISO above using
   [Rufus](https://rufus.ie/en/) or equivalent)
-- Some sort of USB hub with at least 3 ports
+- Some sort of USB hub with at least 3 ports (technically optional, but annoying otherwise)
 - A spare keyboard and mouse
-- An external 1080p monitor that can swivel to portrait and has DVI input on it (oddly specific, not strictly required,
+- An external 1080p monitor that can swivel to portrait and has HDMI or DisplayPort input on it (not strictly required,
   but a huge pain in the ass if you don't have it)
 - These files on the flash drive:
   - [7-Zip](https://7-zip.org)
@@ -41,7 +52,7 @@ however there may be room for improvement.
       - Intel Chipset 10.1.1.38
       - Realtek Audio 435
   - Additional Drivers
-      - [Nvidia Graphics Drivers](https://www.nvidia.com/download/driverresults.aspx/141906/en-us/)
+      - [Nvidia Graphics Drivers](https://www.nvidia.com/en-us/drivers/details/141906/)
         (Older version, newer versions might work? Probably not.)
       - [FTDI D2XX USB to Serial](https://ftdichip.com/wp-content/uploads/2021/08/CDM212364_Setup.zip)
   - [DirectX June 2010 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=8109)
@@ -67,20 +78,20 @@ however there may be room for improvement.
 > WARNING:
 > **Ensure the cab's main power is disconnected, because it should be.** This may be obvious, but make sure.
 
-In this part, we need to take the ALLS computer out so that we can install the new drive. 
+We need to take the ALLS computer out so that we can install the new drive. 
 Unfortunately it's quite difficult to open the ALLS while it's still in the cab, so we must remove it for now.
 
 Inside the cab, you will find the ALLS firmly attached to the subwoofer. If your cab came with a keychip, you will
 first want to remove it from the keychip slot by squeezing on the bottom of it and pulling it out. Don't misplace that.
 
-Next, unplug the single connector in the well to the right of the subwoofer and left of the coin box. Lastly, you want
-to start by detaching all of the cables from the ALLS and then undoing the 2-3 cable ties that are holding the cables
+Next, unplug the single connector inside to the right of the subwoofer and left of the coin box. Lastly, you want
+to start by detaching all the cables from the ALLS and then undoing the 2-3 cable ties that are holding the cables
 in place. The cable ties can be tricky; you want to pull upwards on the tab until it clears the hook and then feed it
 through in reverse.
 
-Now your ALLS should be free from cable hell. After moving the cables out of the way, locate the 2 screws in the wells
-to the left and right of the subwoofer and remove them. The entire subwoofer/ALLS assembly should now slide directly
-outwards towards you and can be removed from the cab to be worked on.
+Now your ALLS should be free from cable hell. After moving the cables out of the way, locate the 2 screws
+to the left and right of the subwoofer at the bottom and remove them. The entire subwoofer/ALLS assembly should now
+slide directly outwards towards you and can be removed from the cab to be worked on.
 
 The ALLS PC has **7** screws securing the top panel, 2 on the top, 3 in the front, 1 on the right side, and 1 on the
 left side (that doesn't look attached). After removing those screws, you can slide the top panel forward and
@@ -104,15 +115,15 @@ just in case anything happens to it.
 Now you can install the new drive into the cage. Plug the SATA connectors back in, but don't install the cage back onto
 the frame, unless you aren't using the USB to SATA adapter to transfer files to your drive, in which case you can.
 
-Slide the subwoofer/ALLS assembly back into the cab. Be aware that there is an alignment tab in the back of the cab
-where the subwoofer slots in. Don't screw the subwoofer down yet, you have to be able to remove it to put the top panel
-back on later.
+Leave the top panel off for now and slide the subwoofer/ALLS assembly back into the cab. Be aware that there is an
+alignment tab in the back of the cab where the subwoofer slots in. Don't screw the subwoofer down yet, you have to be
+able to remove it to put the top panel back on later.
 
 There should be a helpful diagram sticker on the front of the ALLS that shows you where to plug all of the cables in,
 take note of the tags on the cables that assign them different roles. Plug everything back in *except the monitor* as
-shown by the diagram, and don't put the ties back on just yet.
+shown by the diagram, and don't put the ties back on just yet. At this point, you can also reinsert the keychip.
 
-**Don't forget the funny subwoofer connector.**
+**Don't forget to plug in the subwoofer connector again.**
 
 It's finally time to do some actual installing.
 
@@ -120,16 +131,27 @@ It's finally time to do some actual installing.
 
 ## Part 1: BIOS Configuration, Installing Windows
 
+### Initial Setup
+
+Before we continue, you should grab your external monitor, ensure it's in a landscape position, and plug it into the
+graphics card. You should also ensure that your USB hub is connected, with your keyboard and mouse ready. You should
+also plug in your USB drive with **Windows 10 Enterprise LTSB 2016 x64** to the hub. 
+
+***It is very important that you have the monitor plugged in before booting the system, or it will not be recognized.***
+
+You'll want to also plug your cab back into power.
+
 ### BIOS Configuration
 
-At this point, you should grab your external monitor, ensure it's in a landscape position, and plug it into the
-DVI port on the graphics card.
-> NOTE: None of the other ports worked on my card, but they may work for you. Using DVI guarantees it will work.
+> NOTE:
+> This step can be skipped if you do not plan on booting into USB drives after setting up your new drive. This is simply
+> a "nice to have" and not required for things to work properly.
+> 
+> **If you choose to skip this, simply flip the power switch on and continue.**
 
-You will now want to connect your USB hub to one of the available USB ports and connect the keyboard, mouse, and
-USB drive with Windows 10 Enterprise LTSB 2016 x64 to the hub. From here, plug the cab back into power, grab the
-keyboard, flip the main power switch located the inside of the cab (not the ALLS one, ensure that always stays on),
-and spam the <kbd>Del</kbd> key until you are prompted for the BIOS password, which is `iG4k8yDa`.
+From here, grab the keyboard, flip the main power switch located the inside of the cab
+(not the ALLS one, ensure that always stays on), and spam the <kbd>Del</kbd> key until you are prompted for the
+BIOS password, which is `iG4k8yDa`.
 
 Once you have access to the BIOS, you'll want to head into the `Boot` section and change the first boot device to 
 `USB Hard Drive` (the other USB ones didn't work for me) and the second boot device to the Hard Drive, 
@@ -138,13 +160,13 @@ as shown in the picture.
 > DANGER: **Do not change anything else!** You risk wiping your TPM key and make it impossible to boot from the
 > original drive if you do!
 
-Save and exit with <kbd>F4</kbd> and select `Yes` when you are done.
+Save and exit with <kbd>F4</kbd> and select `Yes` when you are done. It should reboot and
+put you into the Windows installer.
 
 ### Installing Windows
 
-Once your BIOS is correctly configured, it should reboot and put you into the Windows installer. Start the installation,
-and if it asks you for a product key at any point, skip it. Next, it will ask you what kind of Windows install you want;
-pick `Custom` and you should be presented with the partitioning screen.
+Start the installation, and if it asks you for a product key at any point, skip it. Next, it will ask you what kind of
+Windows install you want; pick `Custom` and you should be presented with the partitioning screen.
 
 You will want to create a new partition on Drive 0 that is the default size (the entire drive). It will notify you that
 it's creating additional partitions to help with Windows, and then you can continue to the next step.
@@ -179,8 +201,10 @@ Run the installer for the Nvidia Display Driver, making sure to only select `NVI
 you don't need GeForce Experience, because that shit sucks. Select `Custom Install`, uncheck everything, then click `Next`.
 Wait for this process to complete, you may see your screen flicker.
 
-**If any of the installers prompt you to restart, select `Restart Later.`** Install the FTDI driver,
-Management Engine, Chipset, and Audio drivers.
+> NOTE:
+> If any of the installers prompt you to restart, select `Restart Later.`
+
+Install the FTDI driver, Management Engine, Chipset, and Audio drivers.
 
 Now install the both Visual C++ Redists, and the DirectX Redist. Specify a path for the DirectX Redist (I usually use
 `C:\DX`), and run `DXSETUP` from that folder to install.
@@ -210,29 +234,31 @@ do the following:
 * Double click on `Prevent the usage of OneDrive for file storage`
 * Change it from `Not Configured` to `Enabled` and click OK.
 * Navigate back to the Windows Components section, and select `Windows Defender`.
-* Double click on `Turn off Windows Defender` and set it to `Enabled` as well.
+* Double-click on `Turn off Windows Defender` and set it to `Enabled` as well.
 
 You should now reboot the machine **from the Start Menu** to make sure all the changes have saved correctly.
 > WARNING: Do not power cycle the cab until after the computer has shut down, as the changes may not save correctly.
 
 ----
 
-## Part 3: Screen Rotation, Audio Setup, Game Setup and Configuration
+## Part 3: Screen Rotation, Audio Setup
 
-Once the system has rebooted, right click on the desktop, choose NVIDIA Control Panel.
+Once the system has rebooted, right-click on the desktop, choose NVIDIA Control Panel.
 Navigate to `Display > Rotate display`, and select either `Portrait` or `Portrait (flipped)`, depending on the direction
 that your monitor rotates. If your monitor has a resolution greater that 1080p,
 navigate to `Display > Change resolution` and change your resolution to 1080 x 1920.
 
 Now, press the Windows key, type `real` and open the Realtek HD Audio Manager. Change the Speaker Configuration from 
-Stereo to Quadraphonic, right click on the pink jack, and select `Connector Retasking...`. In the window that appears,
+Stereo to Quadraphonic, right-click on the pink jack, and select `Connector Retasking...`. In the window that appears,
 choose `Rear Speaker Out` and disable the auto popup dialog. Press OK on both dialogs.
 
 After that, shut down the system and flip the main cabinet power switch (by the test and service buttons). This is
 mostly to make sure the file system changes are journaled correctly, as if they aren't, connecting the drive to another
-computer will cause all files transfered to it afterward to disappear when the system is booted again.
+computer will cause all files transferred to it afterward to disappear when the system is booted again.
 
-Now, detach the new drive from the system and connect it to your USB to SATA adapter, and then to your computer.
+## Part 4: Game Setup and Configuration
+
+Detach the new drive from the system and connect it to your USB to SATA adapter, and then to your computer.
 
 > DANGER: **Scary Red Text Zone** 
 > <span style="color: red; font-size: .8rem;">
@@ -243,8 +269,10 @@ Once you have connected the drive, create a `WACCA` folder on the root of the dr
 another folder called `Reverse` (or whatever version you're using).
 
 > FAILURE: **Unsupported versions**
-> As of August 2023, **SDFE** 1.00.00 (Launch version) and all versions of **SDHN or SDJE** (Chinese version) do not 
-> work with the configuration laid out in this guide, due to missing support in ST.
+> As of July 2025, all versions of **SDHN or SDJE** (Chinese version) do not 
+> work with the configuration laid out in this guide. This may change in the future.
+> 
+> Please ensure you are working with clean game files if you run into issues.
   
 Copy the game files into the directory you created. There should be folders named `bin`, `pxbin` and `WindowsNoEditor`
 in the folder, as well as a few files. Navigate to the `bin` folder, and extract the ST zip into this folder.
@@ -252,10 +280,12 @@ in the folder, as well as a few files. Navigate to the `bin` folder, and extract
 If you are configuring a version that is pre-Lily (WACCA or WACCA S), you need to open the `start.bat` file 
 **with a text editor**, and change `Mercury-Win64-Shipping.exe` to `Mercury.exe`.
 
-If you are ***not*** using the provided ST build, you will need to make some changes to `segatools.ini`:
-- Change `enable` to 0 under the `[touch]` and `[elisabeth]` sections
-- Add `enable=0` under the `[io4]` section
-- Add an `[aime]` section at the bottom and add `enable=0` on that as well
+> ABSTRACT: **ST Note**
+> If you are ***not*** using the provided ST build, you will need to make some changes to `segatools.ini`:
+>
+> - Change `enable` to 0 under the `[touch]` and `[elisabeth]` sections
+> - Add `enable=0` under the `[io4]` section
+> - Add an `[aime]` section at the bottom and add `enable=0` on that as well
 
 **Eject the drive**, plug it back in to the cab, and power the cab on.
  
@@ -285,15 +315,32 @@ Return back to the main test menu and navigate to `System Setting > Closing Time
 `All Days of the Week` and change it until all the times on the page say `OFF`. Select `Apply Settings and Reboot`.
 This will not actually reboot the system, it will only close the game.
 
-**If you are setting up multiple versions, repeat these steps for each version.**
+**If you are setting up multiple versions, repeat these steps for each version you wish to include.**
 
 Follow the setup instructions for the [WACCA Launcher](launcher.md) and then return here.
 
-Finally, you need to configure the cab's display for this new setup. Close all the programs you have open, and then reopen NVIDIA Control Panel and navigate to `Display > Rotate display`.
-Disconnect your monitor from the GPU and connect the cab's DVI cable. Press <kbd>Alt</kbd>+<kbd>Spacebar</kbd>, press <kbd>M</kbd>, and click and drag the window to the part of the display you can see.
-Rotate the display to `Portrait (flipped)` and press Apply.
+Finally, you need to configure the cab's display for this new setup. Close all the programs you have open, and then
+reopen NVIDIA Control Panel and navigate to `Display > Rotate display`. Disconnect your monitor from the GPU and connect
+the cab's DVI cable if you unplugged it. Press <kbd>Alt</kbd>+<kbd>Spacebar</kbd>, press <kbd>M</kbd>, and click and
+drag the window to the part of the display you can see. Rotate the display to `Portrait (flipped)` and press Apply.
 
 Reboot the system and the game should now start automatically. Congratulations, you've now set up your cab!
 
-### TODO: Instructions for reassembling the cab
+## Part 5: Reassembly
 
+Reassembly of the cab is quite simple. Ensure the power is off, unplug all the cables from the ALLS, including the cable
+to the right of the subwoofer.
+
+Pull the subwoofer-ALLS assembly out of the cab, secure the new drive to the drive cage, the drive cage to the top frame,
+and put the lid of the ALLS back on (it's a little tricky, there's a lip on the left side that's not immediately obvious).
+
+Screw in all 7 screws from the lid, then slide the subwoofer-ALLS assembly back into the cab, making sure to line up the
+tab in the back, like before. Connect the subwoofer cable, and reconnect the ALLS cables, as done previously.
+
+Screw in the two subwoofer screws at the bottom of the subwoofer assembly.
+
+Optionally, you can put the cable ties back, for a cleaner look. You don't have to install them as they were before, you
+can just run the tie through the hole, and it should hold itself in well enough.
+
+Store the original drive somewhere safe, I personally keep mine in the bag that my manuals came in, but that's not an
+option for everyone. You could also store it in the coin drawer, if you don't plan on using coins in your cab.

@@ -11,7 +11,7 @@ This is a guide explaining how to play WACCA at home without owning a cabinet, w
 
 ### Things you'll need
 - WACCA data of preferably the latest available version (SDFE 3.10.00 being the version used for testing)
-- a VR headset of any  kind (a Quest 3S is used for testing here)
+- a VR headset of any kind (a Quest 3S is used for testing here)
 - a VR capable computer, this is non-negotiable as there is no way to run WACVR and WACCA data on Quest headsets.
 - SteamVR
 - [WACVR](https://github.com/xiaopeng12138/WACVR)
@@ -28,14 +28,11 @@ If your data is already in a state of starting to the main WACCA screen, you may
 Download Segatools from [here](https://gitea.tendokyu.moe/TeamTofuShop/segatools) and extract to a folder of your choice.
 you should see many individual zip files as shown below, the one we want is `mercury.zip`
 
-<figure markdown>![Segatools ZIP example](../img/segatoolsexample.png)
-</figure>
-
+![Segatools ZIP example](../img/segatoolsexample.png)
 
 extract to the `app/bin` in your data folder, the folder should look like this (excluding the DEVICE folder) 
 
-<figure markdown>![Bin folder example](../img/binfolderexample.png)
-</figure>
+![Bin folder example](../img/binfolderexample.png)
 
 #### Changing Configuration Files
 
@@ -81,13 +78,16 @@ Download WACVR from [here](https://github.com/xiaopeng12138/WACVR) and extract t
 
 copy the `mercuryio.dll` file to the the `App/bin` folder in your data folder
 
+> DANGER: **Intel CPU Bug**
+> If you have an Intel Core 10th gen or newer CPU, you need to edit `start.bat` in the `App/bin` folder, and add this right
+> after the `@echo off` line:
+> ```
+> set OPENSSL_ia32cap=:~0x20000000
+> ```
+> If you don't do this, the game will crash a few minutes after starting.
+
 Start up your VR software as well as SteamVR, then launch WACCA and WACVR
 WACVR should set up with WACCA automatically.
 
 > WARNING: **Disclaimer**
 > If your experiencing a warped screen in WACVR, set your monitor to portrait mode and check the full display capture box in WACVR, I have no clue why this happens, but this is the solution that works for me.
-
-
-
-
-
