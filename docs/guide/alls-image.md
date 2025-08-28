@@ -1,5 +1,8 @@
 # Imaging your ALLS drive
 
+> WARNING:
+> This guide needs to be cleaned up. It's a bit too confusing right now.
+
 ALLS uses various tamper protections such as bitlocker, tpm, etc. that are provisioned from the factory. As such, you can't just stick in any drive and expect it to work, even with keychip.
 Your drive contains your unique PCBID, so it's a very good idea to image your drive, so you can restore it and have it work, or to just have a 2nd drive handy.
 
