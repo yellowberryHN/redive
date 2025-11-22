@@ -5,7 +5,7 @@
 
 The FTDI adapter we use is an [Adafruit FT232H](https://www.adafruit.com/product/2264).
 To flash it with the proper firmware you'll need the 
-[FT_PROG EEPROM programmer](https://ftdichip.com/wp-content/uploads/2023/08/FT_Prog_v3.12.37.642-Installer.exe_.zip) 
+[FT_PROG EEPROM programmer](https://ftdichip.com/wp-content/uploads/2025/07/FT_Prog_v3.12.70.678-Installer.zip) ([mirror](../files/FT_Prog_v3.12.70.678-Installer.zip))
 software
 
 ## Instructions

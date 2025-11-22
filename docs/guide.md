@@ -54,7 +54,7 @@ but it still requires a level of technical background, which you are assumed to 
   - Additional Drivers
       - [Nvidia Graphics Drivers](https://www.nvidia.com/en-us/drivers/details/141906/)
         (Older version, newer versions might work? Probably not.)
-      - [FTDI D2XX USB to Serial](https://ftdichip.com/wp-content/uploads/2021/08/CDM212364_Setup.zip)
+      - [FTDI D2XX USB to Serial](https://ftdichip.com/wp-content/uploads/2021/08/CDM212364_Setup.zip) ([mirror](files/CDM212364_Setup.zip))
   - [DirectX June 2010 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=8109)
   - [Visual C++ 2012 Redistributable x64](https://www.microsoft.com/en-us/download/details.aspx?id=30679)
   - [Visual C++ 2015-2022 Redistributable x64](https://aka.ms/vs/17/release/vc_redist.x64.exe)
