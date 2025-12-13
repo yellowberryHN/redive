@@ -46,8 +46,7 @@ nav:
   - Home: index.md
   - Info:
     - "The DiVER's Guide": guide.md
-    - Guides: 
-      - Test Menu: guide/test-menu.md
+    - Guides:
       - Replacing LED Boards: guide/led-replace.md
       - DIY LED Boards:      guide/led-pcb.md
       - ALLS Drive Imaging: guide/alls-image.md
@@ -62,4 +61,6 @@ nav:
     - Tools:
       - WACCA Launcher: launcher.md
     - Reference:
+      - Test Menu: info/test-menu.md
+      - Error Dictionary: info/errors.md
       - Table Map: info/data/tables.md
