@@ -14,6 +14,7 @@ but it still requires a level of technical background, which you are assumed to 
 
 > WARNING: **Disclaimer**
 > This process takes a while (around 2-3 hours), there's a lot of tedious setup, and it's a bit of a pain in the ass.
+> Hopefully this will change in the future, we'll see.
 
 > QUESTION: **"Do I need this guide?"**
 > If you only intend to play on [popular network],
@@ -35,8 +36,8 @@ but it still requires a level of technical background, which you are assumed to 
   > Please ensure you are working with clean game files if you run into issues.
 - Phillips #2 screwdriver, and ideally JIS #2 as well.
 - An empty SATA SSD with at least 128GB of capacity (I use [this one](https://www.amazon.com/-/dp/B08CK7T9FG/) in mine)
-- [An ISO of **Windows 10 Enterprise LTSB 2016 x64**](https://drive.massgrave.dev/en_windows_10_enterprise_2016_ltsb_x64_dvd_9059483.iso)
-  ([mirror](https://mega.nz/file/PBtggDaA#HySjX6zWohJKRVqpt_qUYgzRCBFzTmnNDXWESj_mvWI)) (This is important)
+- [An ISO of **Windows 10 Enterprise LTSB 2016 x64**](https://massgrave.dev/windows_ltsc_links)
+  ([mirror](https://mega.nz/file/PBtggDaA#HySjX6zWohJKRVqpt_qUYgzRCBFzTmnNDXWESj_mvWI)) (You specifically want `en_windows_10_enterprise_2016_ltsb_x64_dvd_9059483.iso`, this is important)
 - A 16gb or higher capacity flash drive (Turn this drive into a bootable drive of the ISO above using
   [Rufus](https://rufus.ie/en/) or equivalent)
 - Some sort of USB hub with at least 3 ports (technically optional, but annoying otherwise)
