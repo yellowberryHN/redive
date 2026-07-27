@@ -459,6 +459,52 @@ A list of all the UI timers used in the game, and how long their time limits are
 |----------------|-----------------|---------------|-------|
 | LimitationTime | *FloatProperty* | `99`          |       |
 
+#### Table Name Translations
+
+| Original                                     | Translated                                                                                       |
+|----------------------------------------------|--------------------------------------------------------------------------------------------------|
+| チュートリアル選択画面                                  | Tutorial selection screen                                                                        |
+| モードセレクト画面                                    | mode select                                                                                      |
+| 楽曲選択画面                                       | song select                                                                                      |
+| 難易度選択画面                                      | difficulty select (potentially unused?)                                                          |
+| 最終確認画面                                       | song confirm                                                                                     |
+| リザルト画面                                       | result screen                                                                                    |
+| モード選択時のチュートリアルの表示時間（この時間もモードセレクト画面の時間は消費される） | how much time the tutorial takes away from mode select                                           |
+| Aime認証待ち時間                                   | aime authentication waiting time (???)                                                           |
+| Aime確認事項同意画面                                 | aime agreement confirmation screen (registration of card)                                        |
+| ユーザー情報表示画面                                   | user information display screen (unsure)                                                         |
+| クレジット投入画面                                    | credit input screen                                                                              |
+| ネームエントリー                                     | name entry (registration)                                                                        |
+| マイルーム                                        | my room timer                                                                                    |
+| 段位認定チュートリアル                                  | stage up? tutorial                                                                               |
+| 段位認定選択                                       | stage up? selection                                                                              |
+| 段位認定確認                                       | state up? confirmation                                                                           |
+| マルチルーム                                       | multiplayer room?                                                                                |
+| マルチ選曲                                        | multiplayer song select                                                                          |
+| マルチ難易度                                       | multiplayer difficulty select (potentially unused?)                                              |
+| マルチ最終確認                                      | multiplayer song confirm                                                                         |
+| マルチロスタイム                                     | multiplayer loss time????                                                                        |
+| VIP入会画面                                      | VIP sign-up screen                                                                               |
+| クレジットを入れた時はこの値になる                            | "this is the value when you add credits" (added on to credit timer when new credit is inserted?) |
+| 免責表示各ページの時間                                  | disclaimer time for each page (vip disclaimer timer?)                                            |
+| 免責表示の同意ページの時間                                | disclaimer consent page (vip agreement confirmation?)                                            |
+| ウェルカム告知表示時間                                  | welcome annoucement display time (login annoucement?)                                            |
+| ウェルカムログインボーナス表示時間                            | welcome login bonus time                                                                         |
+| ショップ画面                                       | shop screen                                                                                      |
+| 購入確認画面                                       | purchase confirmation (shop)                                                                     |
+| 購入完了画面                                       | purchase completed (shop)                                                                        |
+| ゲート選択画面                                      | gate select                                                                                      |
+| クレジット投入確認画面                                  | "credit insertion confirmation screen"                                                           |
+| コンティニュー画面                                    | continue                                                                                         |
+| アイテム使用画面                                     | item use screen                                                                                  |
+| 各アイテム使用確認時間                                  | "check time for each item"                                                                       |
+| 楽曲選択オプション                                    | song select options (settings)                                                                   |
+| ショップ、Vip入金処理確認ポップアップ時間                       | "Shop, VIP deposit processing confirmation pop-up time"                                          |
+| ショップ、Vip入金画面時間                               | Shop, VIP deposit screen time                                                                    |
+| リザルト画面でのビンゴミッション確認時間                         | bingo timer in result screen                                                                     |
+| 時間貸しモードの時間                                   | free time duration                                                                               |
+| 時間貸しモードの時間(VIP)                              | free time duration for VIP                                                                       |
+
 ### LoginRandomMessageTable
 A list of randomized login messages.
 <H4>Structure</H4>
@@ -483,7 +529,8 @@ Appears to be a list of message tag string replacements. Unused since Lily R, ma
 | AdaptEndTime   | *Int64Property*<br/>(WACCA Date+Time) | `20210810065959` |       |
 
 ### MirrorSettingTable
-Setting, Mirror Notes (ON/OFF), mirrors notes across Y axis.
+Setting, Mirror Notes (ON/OFF), mirrors notes across Y axis. It is possible to modify this table
+to re-enable the 2 removed mirror modes, vertical mirror and both axis mirror.
 
 ### MultiPlayPointTable
 Appears to be a list of WP bonus multipliers for multiplayer games. Has 4 ranks? Not sure how this works.
@@ -683,7 +730,7 @@ List of gauge (health) points gained/lost for each judgement on each type of not
 | NormaGaugeMiss      | *IntProperty* | `-5`          | Health to add when hitting the note with Miss judgement      |
 
 ### NoteDesignTable
-Setting, Mask (0-4), used to control the background dimming.
+Setting, Note Thickness (0-4), used to control how thick notes are visually on the playfield.
 
 ### NotesColorTable
 List of note color definitions, used by [MusicSelectOptionNoteColorTable](#musicselectoptionnotecolortable).
